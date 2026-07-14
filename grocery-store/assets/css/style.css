@@ -1,0 +1,145 @@
+/* FreshMart — Custom Styles */
+:root {
+    --green: #198754;
+    --green-light: #d1e7dd;
+    --orange: #fd7e14;
+}
+
+body {
+    background-color: #f8fdf9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.product-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    background: #f0f0f0;
+}
+.product-card .badge-stock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Hero banner */
+.hero-banner {
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 60px 40px;
+}
+
+/* Category cards */
+.category-card {
+    border-radius: 12px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.category-card:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: inherit;
+}
+.category-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 10px;
+}
+
+/* Cart */
+.cart-item-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Order status badges */
+.badge-pending    { background: #ffc107; color: #000; }
+.badge-processing { background: #0dcaf0; color: #000; }
+.badge-shipped    { background: #0d6efd; color: #fff; }
+.badge-delivered  { background: #198754; color: #fff; }
+.badge-cancelled  { background: #dc3545; color: #fff; }
+
+/* Admin sidebar */
+.admin-sidebar {
+    min-height: 100vh;
+    background: #1a1a2e;
+    color: #ccc;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.admin-sidebar .brand {
+    padding: 20px 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4ecca3;
+    border-bottom: 1px solid #2a2a4a;
+}
+.admin-sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #ccc;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.admin-sidebar a:hover, .admin-sidebar a.active {
+    background: #4ecca3;
+    color: #1a1a2e;
+}
+.admin-sidebar a i {
+    margin-right: 10px;
+    width: 20px;
+}
+.admin-content {
+    margin-left: 240px;
+    padding: 30px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+.stat-card {
+    border-radius: 12px;
+    padding: 24px;
+    color: white;
+    text-align: center;
+}
+
+/* Placeholder product image */
+.img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #e0f2e9, #b2dfdb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #198754;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar { display: none; }
+    .admin-content { margin-left: 0; }
+    .hero-banner { padding: 30px 20px; }
+}
